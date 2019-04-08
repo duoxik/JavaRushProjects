@@ -3,7 +3,7 @@ package com.duoxik.tasks.calculatorV2;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StringHelper {
+public class ExpressionHelper {
 
     public static String removeSpaces(String expression) {
 
@@ -26,8 +26,19 @@ public class StringHelper {
 
         pattern = Pattern.compile("^\\d+[.]?\\d*[\\^]");
         while ((matcher = pattern.matcher(expression)).find())
-            expression = expression.substring(0, matcher.start())
-                    + "+" + expression.substring(matcher.start());
+            expression = "+" + expression;
+
+        pattern = Pattern.compile("^[-]\\d+[.]?\\d*[\\^]");
+        while ((matcher = pattern.matcher(expression)).find())
+            expression = "-+" + expression.substring(1);
+
+        return expression;
+    }
+
+    public static String checkTwoMinusesInARow(String expression) {
+
+        if (expression.charAt(0) == '-' && expression.charAt(1) == '-')
+            return expression.substring(2);
 
         return expression;
     }

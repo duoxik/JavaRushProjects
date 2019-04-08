@@ -27,8 +27,9 @@ public class Calculator {
 
     private String calculateExpressionWithoutBrackets(String expression) {
 
-        expression = StringHelper.removeSpaces(expression);
-        expression = StringHelper.insertPlusesBeforeNumToDegree(expression);
+        expression = ExpressionHelper.removeSpaces(expression);
+        expression = ExpressionHelper.checkTwoMinusesInARow(expression);
+        expression = ExpressionHelper.insertPlusesBeforeNumToDegree(expression);
 
         while (!isNumber(expression))
             expression = simplifyExpression(expression);
