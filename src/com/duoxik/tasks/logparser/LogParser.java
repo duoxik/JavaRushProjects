@@ -1,10 +1,9 @@
 package com.duoxik.tasks.logparser;
 
-import com.javarush.task.task39.task3913.query.*;
+import com.duoxik.tasks.logparser.query.*;
 
 import java.io.*;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;

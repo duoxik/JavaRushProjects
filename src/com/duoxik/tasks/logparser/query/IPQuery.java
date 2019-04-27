@@ -1,7 +1,7 @@
 package com.duoxik.tasks.logparser.query;
 
-import com.javarush.task.task39.task3913.Event;
-import com.javarush.task.task39.task3913.Status;
+import com.duoxik.tasks.logparser.Event;
+import com.duoxik.tasks.logparser.Status;
 
 import java.util.Date;
 import java.util.Set;
